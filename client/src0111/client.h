@@ -8,4 +8,6 @@ int connect_to(char* host, int portnum);
 int join_room(int roomid);
 int add_player(char* nname);
 
+int get_server_socket_fd();
+
 #endif // CLIENT_H__

@@ -11,12 +11,31 @@ struct client_info
 	int roomid;
 };
 
-int add_player();
-int expel_player();
+struct coordinate
+{
+	int xloc;
+	int yloc;
+};
 
+struct player
+{
+	int socketid;
+	int playerid;
+	char nname[20];
+};
+
+int add_player(char* request, int socketfdid);
+
+int expel_player();
 int get_player_sum();
 int add_player_sum();
 int minus_player_sum();
+
+void update_foods(int i);
+int gather(char* request);
+int convey();
+
+int detect();
 
 
 #endif // MANAGE_H__

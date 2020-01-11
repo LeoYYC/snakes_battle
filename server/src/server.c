@@ -1,6 +1,6 @@
 #include "server.h"
 
-#include "msg.h"
+#include "utils/msg.h"
 
 int prefock_pids[PREFORK];
 int sockpair[PREFORK][2];

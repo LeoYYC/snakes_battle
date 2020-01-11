@@ -57,6 +57,7 @@ int main(int ac, char* av[])
 		}
 
 		int play_rlt = start();
+		
 		char again_sign;
 		while (!play_rlt)
 		{
@@ -72,6 +73,8 @@ int main(int ac, char* av[])
 			}
 		}
 	}
+	join_room(1);
+	add_player("haha");
 	start();
 	return 0;
 }

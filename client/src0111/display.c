@@ -1,5 +1,7 @@
 #include "display.h"
 
+#include "client.h"
+
 int input_char;
 struct coordinate dir;
 int move_count = 0;
@@ -31,7 +33,7 @@ int init_game()
 	dir.xloc = 1;
 	dir.yloc = 0;
 	init_me_snake(COLS, LINES);
-
+	
 	set_ticker(RENDER_DELAY);
 }
 
@@ -192,6 +194,7 @@ void snake_move()
 			}
 		}
 	}
+	upload_me_snake_data(get_server_socket_fd());
 }
 
 //void blank_snake()
